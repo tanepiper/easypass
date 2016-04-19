@@ -1,14 +1,14 @@
 {
-  "name": "easypass",
-  "version": "1.0.0",
+  "name": "@tanepiper/easypass-2",
+  "version": "0.1.0",
   "description": "Pronounceable Password Generator",
-  "main": "easypass.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -c -t 100 test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/inadarei/easypass.git"
+    "url": "git://github.com/tanepiper/easypass.git"
   },
   "keywords": [
     "password",
@@ -16,9 +16,14 @@
     "pronounceable",
     "utility"
   ],
-  "author": "Irakli Nadareishvili",
+  "author": "Tane Piper <piper.tane@gmail.com>",
+  "contributors": ["Irakli Nadareishvili"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inadarei/easypass/issues"
+    "url": "https://github.com/tanepiper/easypass/issues"
+  },
+  "devDependencies": {
+    "code": "^2.2.0",
+    "lab": "^10.3.1"
   }
 }
