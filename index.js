@@ -1,16 +1,18 @@
+'use strict';
+
 /**
- * generate - description
+ * generate password
  *
- * @param  {type} length description
- * @return {type}        description
+ * @param  {number} length The length of password to generate
+ * @param  {bool} includeNumbers Include some numbers in the password
+ * @return {string}
  */
 function generate(length, includeNumbers) {
-  'use strict';
 
   length = length || 8;
 
-  const vowels =  ["a", "e", "i", "o", "u"];
-  const cons  =   ["b", "c", "d", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "u", "v", "w", "tr", "cr", "br", "fr", "th", "dr", "ch", "ph", "wr", "st", "sp", "sw", "pr", "sl", "cl"];
+  const vowels =  ['a', 'e', 'i', 'o', 'u'];
+  const cons  =   ['b', 'c', 'd', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'u', 'v', 'w', 'tr', 'cr', 'br', 'fr', 'th', 'dr', 'ch', 'ph', 'wr', 'st', 'sp', 'sw', 'pr', 'sl', 'cl'];
 
   const num_vowels = vowels.length;
   const num_cons   = cons.length;
@@ -28,8 +30,14 @@ function generate(length, includeNumbers) {
 
 exports.generate = generate;
 
+/**
+ * Batch function
+ * @param total {number} Total number of passwords to batch generate
+ * @param length {number} The length of passwords to generate
+ * @param includeNumbers {bool} Include numbers or not
+ * @returns {Array}
+ */
 function batch(total, length, includeNumbers) {
-  'use strict';
 
   const passwords = [];
   for (let i = 0; i < total; i++) {

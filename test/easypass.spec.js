@@ -1,9 +1,11 @@
+'use strict';
+
 const Lab = require('lab');
 const Code = require('code');
-
 const easypass = require('./../');
 
-const lab = exports.lab = Lab.script()
+const lab = exports.lab = Lab.script();
+
 
 
 lab.experiment('Easypass', () => {
@@ -36,10 +38,10 @@ lab.experiment('Easypass', () => {
 
 lab.experiment('Easypass Batch', () => {
 
-  const passwords = [];
+  let passwords = [];
 
   lab.before(done => {
-    passwords = easypass.batch(100);
+    passwords = easypass.batch(100, 8, true);
     done();
   });
 
